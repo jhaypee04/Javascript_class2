@@ -48,3 +48,45 @@ let step = 5;
 for ( let weeks = 0; weeks < 10; weeks++ ){
     console.log(weeks);
 }
+// Work 2
+// count down to the months of the year using for loop
+
+// Class Work 3
+// 1. What will be outputted to the console in this instance?
+let a = 5;
+let b = 10;
+let c = 20;
+let d = 30;
+console.log(a > b || b > a); //
+console.log(a > b && b > a); //
+console.log(d > b || b > a); //
+
+console.log(d > b && b > a) //
+
+//Research on Ternary Operator
+// 2.
+// What will be outputted to the console in this instance?
+let val = 100;
+let message = (val > 100) ? `${val} was greater than 100` :
+`${val} was LESS or Equal to 100`;
+console.log(message);
+let check = (val % 2) ? `Odd` : `Even`;
+check = `${val} is ${check}`;
+console.log(check);
+
+
+// 3.
+// What will be outputted to the console in this instance?
+const q = 1;
+switch (q) {
+case '1':
+answer = "one";
+case 1:
+answer = 1;
+case 2:
+answer = "this is the one";
+break;
+default:
+answer = "not working";
+}
+console.log(answer);
