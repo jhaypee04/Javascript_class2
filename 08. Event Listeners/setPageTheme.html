@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+<body>
+    <h1>Set Page Theme with Event Listeners</h1>
+
+    <script>
+        // step 1
+        let dark_mode = false
+        // step 2
+        window.onclick = function (){
+            console.log('Somewhere on the window was clicked!')
+            // step 3
+            if( !dark_mode ) {
+                console.log('Dark Mode is true!')
+                // step 4
+                document.body.style.backgroundColor = 'black'
+                document.body.style.color = 'white'
+                // step 5
+                dark_mode = true
+            } else {
+                document.body.style.backgroundColor = 'white'
+                document.body.style.color = 'black'
+                // step 5
+                dark_mode = false
+            }
+        }
+    </script>
+</body>
+</html>

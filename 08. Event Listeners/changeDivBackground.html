@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <h2>Change Div Background Color by cliking the colors</h2>
+    <div>red</div>
+    <div>blue</div>
+    <div>green</div>
+    <div>purple</div>
+    <div>salmon</div>
+    <div>olive</div>
+    <div>yellow</div>
+    <div>orange</div>
+    <div>black</div>
+    <div>gold</div>
+    
+    <script>
+        let divs = document.querySelectorAll('div')
+        for (let div = 0; div < divs.length; div++ ) {
+            console.log( divs[div].textContent )
+            // divs[div].style.backgroundColor = divs[div].textContent
+            let eachDiv = divs[div]
+            eachDiv.addEventListener( 'click', function(e){
+                console.log(e)
+                e.target.style.backgroundColor = e.target.textContent
+            })
+
+        }
+    </script>
+</body>
+</html>

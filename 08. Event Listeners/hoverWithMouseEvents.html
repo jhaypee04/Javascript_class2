@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Effects</title>
+</head>
+<body>
+    <h1>Mouse Event Effects</h1>
+    <!-- step 1 -->
+    <div class="element"></div>
+
+    <script>
+        // step 2 & 3
+        let element = document.querySelector('.element')
+        // step 4
+        element.innerHTML = 'Hello World'
+        // step 5
+        element.style.width = '100px';
+        element.style.height = '100px';
+        // default bgColor
+        element.style.backgroundColor = 'orange';
+        // step 6
+        function handler( color, event_type ) {
+            // step 7
+            console.log( 'The color is: ' + color + '\nThe Event is ' + event_type )
+            element.style.backgroundColor = color
+        }
+        // step 8
+        var md = 'mousedown'
+        var mover = 'mouseover'
+        var mout = 'mouseout'
+        var m_up = 'mouseup'
+
+        element.addEventListener( md, function(){
+            handler( 'green' , md)
+        })
+        element.addEventListener( mover, function(){
+            handler( 'red' , mover )
+        })
+        element.addEventListener( mout, function(){
+            handler( 'yellow' , mout)
+        })
+        element.addEventListener(m_up, function(){
+            handler( 'blue' , m_up)
+        })
+    </script>
+</body>
+</html>
