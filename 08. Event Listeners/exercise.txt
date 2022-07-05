@@ -37,3 +37,56 @@ output the event type to the console.
 mouseup. For each of these events, send two arguments to the function that
 you created: a color value and the event object.
 9. Run the code and try it in your browser
+
+
+By recognizing key presses and detecting the values of characters as key presses
+occur with the element in focus, we can also detect if content is pasted into an input
+
+field.
+
+Class Assignment
+A common problem that we can solve with recursion is calculating the factorial.
+
+Quick mathematics refresher about factorials:
+The factorial of a number is the product of all positive integers
+bigger than 0, up to the number itself. So for example, the factorial
+of seven is 7 * 6 * 5 * 4 * 3 * 2 * 1. You can write this as 7!.
+
+
+
+How are recursive functions going to help us calculate the factorial? We are going to
+call the function with a lower number until we reach 0. In this exercise, we will use
+recursion to calculate the factorial result of a numeric value set as the argument of a
+function.
+1. Create a function that contains a condition within it checking if the argument
+value is 0.
+2. If the parameter is equal to 0, it should return the value of 1. Otherwise, it
+should return the value of the argument multiplied by the value returned
+from the function itself, subtracting one from the value of the argument
+that is provided. This will result in running the block of code until the value
+reaches 0.
+3. Invoke the function, providing an argument of whatever number you want
+to find the factorial of. The code should run whatever number is passed
+initially into the function, decreasing all the way to 0 and outputting the
+results of the calculation to the console. It could also contain a console.log()
+call to print the current value of the argument in the function as it gets
+invoked.
+
+Change and update the number to see how it affects the results.
+
+Exercise 4: keyboard events
+
+1. Create two input fields within your HTML. Add an element to output
+content into.
+2. Using JavaScript, select the page elements. You can assign a variable called
+output to the element with a class of output. Create another variable, eles,
+and select all the input fields (using querySelectorAll()) as its value. This
+way, we can loop through the node list and assign the same events to all the
+matching elements.
+3. Using for loop iterate through all the input elements from the page. Add
+the same event listeners to all of them.
+4. Add a keydown event listener and check if the value is a number. If it is a
+number, then add it to the output area.
+5. On keyup, output to the console the value of the key.
+6. Check if there was a paste in the input field; if there was, then you can output
+the word paste to the console.

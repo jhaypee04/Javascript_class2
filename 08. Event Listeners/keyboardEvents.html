@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard Events</title>
+</head>
+<body>
+    <h2>Keys event handler</h2>
+    <input type="text" onkeyup="numberCheck()">
+
+    <script>
+        function numberCheck(){
+            console.log(event.key);
+        }
+    </script>
+
+
+<!-- Exercise 4: Keyboarrd Events -->
+<!-- By recognizing key presses and detecting the values of characters as key presses
+occur with the element in focus, we can also detect if content is pasted into an input
+field.
+1. Create two input fields within your HTML. Add an element to output
+content too. -->
+<div class="output"></div>
+<input type="text" class="eles" >
+    <input type="text" class="eles" >
+
+    <!-- 2. Using JavaScript, select the page elements. You can assign a variable called
+output to the element with a class of output. Create another variable, eles,
+and select all the input fields (using querySelectorAll()) as its value. This
+way, we can loop through the node list and assign the same events to all the
+matching elements. -->
+
+<script>
+    var output = document.querySelector('.output');
+    var eles= document.querySelectorAll('.eles');
+//  3. Using for loop, iterate through all the input elements from the page. Add
+// the same event listeners to all of them.
+    for( var i = 0; i < eles.length; i++ ) {
+        eles[i].addEventListener( 'keydown', function(){
+            //         4. Add a keydown event listener and check if the value is a number. If it is a
+            // number, then add it to the output area.
+        //    isNaN - is Not a Number
+        console.log( isNaN(event.key) );
+        if ( isNaN(event.key) ){
+                console.log(' Not a Number!')
+            } else{
+                console.log("A Number is pressed!");
+                output.textContent = event.key;
+            }
+
+        } )
+        // 5. On keyup, output to the console the value of the key.
+        eles[i].addEventListener( 'keyup', function(){
+            console.log(event.key)
+
+        } )
+        eles[i].addEventListener( 'paste', function(){
+            console.log('paste')
+
+        } )
+    }
+</script>
+
+
+</body>
+</html>

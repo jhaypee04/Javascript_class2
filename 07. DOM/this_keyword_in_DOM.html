@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'this' keyword</title>
+</head>
+<body>
+    <h1>The 'this' keyword and the DOM</h1>
+    <h2>The 'this' keyword is used to Traverse the DOM!</h2>
+    <p>This property can be very useful, for example, when
+        you need to get the value of an input box.</p>
+
+        <p onclick="show(this)">Click here! </p>
+
+        <script>
+            function show(element) {
+                console.log(element.parentElement);
+            }
+        </script>
+
+        <!-- Exercise -->
+<!-- exercsie 1: this keyword
+Create a button within a basic HTML document and add the onclick attribute. The
+example will demonstrate how you can reference object data with this:
+1. Create a function to handle a click within your JavaScript code. You can
+name the function message. -->
+<!-- 2. Add this to the onclick function parameters sending the current element
+object data using this. -->
+<button onclick="message(this)">Click me</button>
+
+<script>
+    function message(event) {
+        // 3. Within the message function, use console.dir() to output in the console the element object data that was sent to the function using onclick and this.
+        console.dir(event.textContent)
+    }
+    </script>
+    <!-- 4. Add a second button to the page also invoking the same function on the click. -->
+    <button onclick="message(this)">Button 2</button>
+</body>
+</html>
